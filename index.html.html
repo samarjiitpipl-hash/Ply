@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plywood: Types, Advantages, Uses & Price Range | Goraya Trading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf6;
+            color: #2e241d;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* HERO SLIDESHOW */
+        .hero {
+            position: relative;
+            padding: 6rem 0 7rem;
+            overflow: hidden;
+            background-color: #2b1d12;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: crossFade 20s infinite;
+        }
+
+        .hero-slide:nth-child(1) { animation-delay: 0s; }
+        .hero-slide:nth-child(2) { animation-delay: 5s; }
+        .hero-slide:nth-child(3) { animation-delay: 10s; }
+        .hero-slide:nth-child(4) { animation-delay: 15s; }
+
+        @keyframes crossFade {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            25% { opacity: 1; }
+            30% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20, 12, 6, 0.85) 0%, rgba(45, 30, 18, 0.55) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 720px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #f0e6d8;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .stat-badge {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 0.95rem;
+            color: #fff;
+        }
+
+        .stat-badge span {
+            font-weight: 600;
+            color: #f5e6d3;
+        }
+
+        .stat-badge i {
+            margin-right: 6px;
+            color: #d4b48c;
+        }
+
+        /* INTRO */
+        .intro-grid {
+            display: flex;
+            gap: 2.5rem;
+            margin: 4rem 0 3rem;
+            align-items: center;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #2b1d12;
+        }
+
+        .intro-text p {
+            color: #3e332b;
+            margin-bottom: 1.2rem;
+        }
+
+        .intro-image {
+            flex: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .intro-image:hover {
+            transform: scale(1.01);
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin: 4rem 0 2.5rem;
+            color: #2b1d12;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #b1875b;
+            margin: 0.8rem auto 0;
+            border-radius: 4px;
+        }
+
+        /* PLYWOOD CARDS */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .ply-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f0e7dd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ply-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -8px rgba(72, 52, 34, 0.15);
+            border-color: #dcc9b6;
+        }
+
+        .card-img {
+            height: 180px;
+            overflow: hidden;
+            background: #e8ddd0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .ply-card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem 1.5rem 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2b1d12;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #5b4b3e;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: #8b6b4b;
+            background: #f3ede6;
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            align-self: flex-start;
+        }
+
+        .durability-badge {
+            font-size: 0.8rem;
+            background: #eae1d7;
+            border-radius: 20px;
+            padding: 0.2rem 1rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #4b3a2b;
+        }
+
+        /* PRICE TABLE */
+        .price-table-wrapper {
+            background: #faf5ef;
+            border-radius: 32px;
+            padding: 2rem 2rem 1rem;
+            margin: 3rem 0 5rem;
+            border: 1px solid #ede3d8;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .price-table th {
+            text-align: left;
+            padding: 1rem 0.8rem 0.8rem;
+            font-weight: 600;
+            color: #4a3626;
+            border-bottom: 2px solid #dccbbc;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-table td {
+            padding: 0.9rem 0.8rem;
+            border-bottom: 1px solid #e7dbce;
+            color: #3d2f24;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table .price-cell {
+            font-weight: 600;
+            color: #8b6b4b;
+        }
+
+        /* ADVANTAGES / DISADVANTAGES */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0 4rem;
+        }
+
+        .pros-box, .cons-box {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem 2rem 1.8rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            border: 1px solid #f0e7dd;
+        }
+
+        .pros-box h3, .cons-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .pros-box h3 i {
+            color: #3f8b5e;
+        }
+
+        .cons-box h3 i {
+            color: #b15e5e;
+        }
+
+        .pros-box ul, .cons-box ul {
+            list-style: none;
+        }
+
+        .pros-box li, .cons-box li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #3e332b;
+        }
+
+        .pros-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3f8b5e;
+            font-weight: 700;
+        }
+
+        .cons-box li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #b15e5e;
+            font-weight: 700;
+        }
+
+        /* GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.1);
+            aspect-ratio: 1 / 1;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin: 4rem 0 3rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #f0e7dd;
+            transition: box-shadow 0.2s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #2b1d12;
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-question i {
+            color: #b1875b;
+            font-size: 1.2rem;
+            width: 1.5rem;
+        }
+
+        .faq-answer {
+            color: #5b4b3e;
+            padding-left: 2.3rem;
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #231b14;
+            color: #e3d7cb;
+            padding: 3rem 0 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            color: #f5ede3;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footer-brand p {
+            color: #b6a693;
+            font-size: 0.95rem;
+            max-width: 320px;
+        }
+
+        .footer-contact h4, .footer-links h4 {
+            color: #f5ede3;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.7rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            color: #cfc1b2;
+        }
+
+        .footer-contact i {
+            width: 1.2rem;
+            color: #c2a888;
+        }
+
+        .footer-contact a {
+            color: #cfc1b2;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-contact a:hover {
+            color: #e6cfb5;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: #b6a693;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: #e6cfb5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2.5rem;
+            margin-top: 2.5rem;
+            border-top: 1px solid #3e3127;
+            color: #8f7e6d;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.6rem; }
+            .intro-grid { flex-direction: column; }
+            .pros-cons { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 1.2rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 3.5rem 0 4.5rem; }
+            .section-title { font-size: 1.8rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .price-table-wrapper { padding: 1.5rem 1rem; }
+            .price-table th, .price-table td { padding: 0.6rem 0.3rem; font-size: 0.8rem; }
+            .stat-badge { flex-wrap: wrap; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION WITH ROTATING SLIDESHOW -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581539250439-c96689b516dd?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1615874694520-474822394e73?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop');"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>Plywood: Types, Advantages, Uses & Price Range</h1>
+            <p>With increasing demand for modern interior designs, plywood is revolutionising furniture in Indian homes. Explore the versatile world of engineered wood.</p>
+            <div class="stat-badge">
+                <span><i class="fas fa-chart-line"></i> 20% market share</span>
+                <span><i class="fas fa-arrow-up"></i> 5.7% growth by 2033</span>
+                <span><i class="fas fa-tree"></i> Eco-friendly options</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- INTRO -->
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>What is plywood?</h2>
+                <p>Plywood, a composite material, is manufactured from plies or thin layers of wood veneer glued together in adjacent layers. It is an engineered wood from the manufactured board family, including Oriented Strand Board (OSB), Medium-Density Fibreboard (MDF) and particle board.</p>
+                <p>Simply put, plywood is a solid composite material made from thin veneer of wood peeled from logs. These layers are sandwiched with binders, pressed and then heated to secure. The plies are laid at various angles so that the grains go one way on the first layer and the other way on further layers.</p>
+                <p>While wood expands and contracts after contact with moisture, the alternating layers of plywood suppress that movement, making it dimensionally stable. The materials and composition make it resistant to cracking, twisting, breaking, bending and shrinking.</p>
+            </div>
+            <div class="intro-image">
+                <img src="9.jpg" alt="Stacked plywood sheets">
+            </div>
+        </div>
+
+        <!-- TYPES OF PLYWOOD -->
+        <h2 class="section-title">Different Types of Plywood & Their Uses</h2>
+
+        <div class="cards-grid">
+            <!-- Softwood -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="1.jpg" alt="Softwood plywood texture">
+                </div>
+                <div class="card-content">
+                    <h3>Softwood Plywood</h3>
+                    <p>Made from cedar, redwood or pinewood. Commonly used for roof covering, home flooring, frame sheathing, sheds, shelves and dog houses.</p>
+                    <span class="price-tag">₹50 – ₹175 / sq.ft</span>
+                    <span class="durability-badge">Strong but lightweight</span>
+                </div>
+            </div>
+
+            <!-- Hardwood -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="2.jpg" alt="Hardwood plywood grain">
+                </div>
+                <div class="card-content">
+                    <h3>Hardwood Plywood</h3>
+                    <p>Sturdy, made of 7+ layers from oak, maple, walnut and birch. Used in furniture, musical instruments, sports equipment and durable wood casings.</p>
+                    <span class="price-tag">₹55 – ₹297 / sq.ft</span>
+                    <span class="durability-badge">Highly durable</span>
+                </div>
+            </div>
+
+            <!-- Aircraft -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="3.jpg" alt="Aircraft grade plywood">
+                </div>
+                <div class="card-content">
+                    <h3>Aircraft Plywood</h3>
+                    <p>High-grade, moisture and heat resistant. Made of mahogany and birch. Used in aircraft, boats, rafters, heavy-load furniture and industrial buildings.</p>
+                    <span class="price-tag">₹200 – ₹400+ (Premium) / sq.ft</span>
+                    <span class="durability-badge">Top grade durability</span>
+                </div>
+            </div>
+
+            <!-- Lumber Core -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="4.jpg" alt="Lumber core plywood">
+                </div>
+                <div class="card-content">
+                    <h3>Lumber Core Plywood</h3>
+                    <p>3-ply design with thick wood core and hardwood outer veneers. Soft interior makes nailing and screwing easy. Ideal for home interior work.</p>
+                    <span class="price-tag">₹70 – ₹265 / sq.ft</span>
+                    <span class="durability-badge">Highly durable</span>
+                </div>
+            </div>
+
+            <!-- Exterior -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="5.jpg" alt="Exterior plywood">
+                </div>
+                <div class="card-content">
+                    <h3>Exterior Plywood</h3>
+                    <p>Weather and water-resistant adhesive. Also called multi-ply. Mould and mildew resistant even in moist locations. Used for exterior woodwork.</p>
+                    <span class="price-tag">₹65 – ₹150 / sq.ft</span>
+                    <span class="durability-badge">Durable</span>
+                </div>
+            </div>
+
+            <!-- Marine -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="6.jpg" alt="Marine plywood">
+                </div>
+                <div class="card-content">
+                    <h3>Marine Plywood</h3>
+                    <p>Highest grade construction plywood with waterproof adhesives. No knotholes. Made from larch or firewood. Not chemically treated, so not rot-resistant.</p>
+                    <span class="price-tag">₹110 – ₹300 / sq.ft</span>
+                    <span class="durability-badge">Durable but not rot-resistant</span>
+                </div>
+            </div>
+
+            <!-- Flexible -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="7.jpg" alt="Flexible plywood curved">
+                </div>
+                <div class="card-content">
+                    <h3>Flexible Plywood</h3>
+                    <p>Ideal for curves and bends. Used for curved construction frames, fancy cabinets and furniture. Cross-grained centre with thicker outer plies.</p>
+                    <span class="price-tag">₹150 – ₹750+ (Premium) / sq.ft</span>
+                    <span class="durability-badge">Not durable</span>
+                </div>
+            </div>
+
+            <!-- Sanded -->
+            <div class="ply-card">
+                <div class="card-img">
+                    <img src="8.jpg" alt="Sanded plywood smooth surface">
+                </div>
+                <div class="card-content">
+                    <h3>Sanded Plywood</h3>
+                    <p>Finely sanded top and bottom layers for smooth surface. Used for visible areas: panels, shelves, bookshelves. 3+ cross-laminated layers.</p>
+                    <span class="price-tag">₹55 – ₹195 / sq.ft</span>
+                    <span class="durability-badge">Durable</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRICE TABLE -->
+        <div class="price-table-wrapper">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Type of Plywood</th>
+                        <th>Price Range (per sq.ft)</th>
+                        <th>Durability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Softwood</td><td class="price-cell">₹50 – ₹175</td><td>Strong but lightweight</td></tr>
+                    <tr><td>Hardwood</td><td class="price-cell">₹55 – ₹297</td><td>Highly durable</td></tr>
+                    <tr><td>Aircraft</td><td class="price-cell">₹200 – ₹400+ (Premium)</td><td>Top grade durability</td></tr>
+                    <tr><td>Lumber Core</td><td class="price-cell">₹70 – ₹265</td><td>Highly durable</td></tr>
+                    <tr><td>Marine</td><td class="price-cell">₹110 – ₹300</td><td>Durable but not resistant to rotting</td></tr>
+                    <tr><td>Exterior</td><td class="price-cell">₹65 – ₹150</td><td>Durable</td></tr>
+                    <tr><td>Flexible</td><td class="price-cell">₹150 – ₹750+ (Premium)</td><td>Not durable</td></tr>
+                    <tr><td>Sanded</td><td class="price-cell">₹55 – ₹195</td><td>Durable</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ADVANTAGES & DISADVANTAGES -->
+        <div class="pros-cons">
+            <div class="pros-box">
+                <h3><i class="fas fa-check-circle"></i> Advantages of Plywood</h3>
+                <ul>
+                    <li>Better strength and durability compared to MDF.</li>
+                    <li>Available in thicknesses from 6mm to 32mm.</li>
+                    <li>Better water resistance.</li>
+                    <li>Made from different wood species.</li>
+                    <li>Easily painted or polished.</li>
+                    <li>Can hold screws and nails.</li>
+                    <li>Offers a smoother surface.</li>
+                    <li>Tailored to different sizes and shapes.</li>
+                    <li>Resistant to warping, twisting and cracking.</li>
+                    <li>More budget-friendly than solid wood.</li>
+                    <li>Available in large sizes for seamless interiors.</li>
+                </ul>
+            </div>
+            <div class="cons-box">
+                <h3><i class="fas fa-exclamation-circle"></i> Disadvantages of Plywood</h3>
+                <ul>
+                    <li>Softer than solid wood or metal; may not withstand heavy items.</li>
+                    <li>Can chip and shatter when cut due to layered structure.</li>
+                    <li>May be more expensive than other engineered wood.</li>
+                    <li>Extra edge treatment needed for better appearance.</li>
+                    <li>Lower resale value compared to solid wood furniture.</li>
+                    <li>Can warp and bend if it absorbs moisture.</li>
+                    <li>May release small amounts of formaldehyde.</li>
+                    <li>Possible manufacturing defects like delamination.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- GALLERY -->
+        <h2 class="section-title">Plywood in Action</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop" alt="Plywood sheets stacked">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Plywood furniture interior">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1000&auto=format&fit=crop" alt="Plywood texture closeup">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop" alt="Modern plywood kitchen">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1000&auto=format&fit=crop" alt="Plywood furniture design">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1000&auto=format&fit=crop" alt="Plywood home decor">
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> Does plywood need fumigation?</div>
+                <div class="faq-answer">Fumigation is a pesticide treatment that kills pests inside wood. It is necessary to fumigate plywood to ensure its longevity.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> Which plywood is best for furniture?</div>
+                <div class="faq-answer">Any A-grade plywood is the best choice for furniture. You can also go for aircraft or hardwood plywoods.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> Which plywood is best for a modular kitchen?</div>
+                <div class="faq-answer">Some of the best kinds for Indian modular kitchens are marine, moisture-resistant, and boiling water-resistant plywoods.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> Can plywood be recycled?</div>
+                <div class="faq-answer">Yes, it falls in Class B of recycling. It needs to be shredded, purified, and turned into mulch for landscaping or animal bedding.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> Can plywood be curved?</div>
+                <div class="faq-answer">Yes, for curved surfaces, opt for flexible plywood as it can easily bend without breaking.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><i class="fas fa-question-circle"></i> How long does plywood furniture last?</div>
+                <div class="faq-answer">Plywood has high durability compared to other wood types. It can survive up to 35 years since it is manufactured from natural plantation wood.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Goraya Trading</h3>
+                    <p>Your trusted partner for premium plywood and engineered wood solutions. Quality, durability, and service since inception.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Types of Plywood</a></li>
+                        <li><a href="#">Price List</a></li>
+                        <li><a href="#">Advantages</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-user"></i> Samarjit Singh</p>
+                    <p><i class="fas fa-briefcase"></i> Operations | Procurement | Marketing</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 31, Purohit Para Lane, Uttarpara, Hooghly - 712258</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info.ply.sam@gmail.com">info.ply.sam@gmail.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+916291166240">+91-6291166240</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Goraya Trading. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #b1875b;"></i> for wood lovers.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

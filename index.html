@@ -478,6 +478,141 @@
             margin-top: 2.5rem; border-top: 1px solid #3e3127;
             color: #8f7e6d; font-size: 0.9rem;
         }
+        /* ENQUIRY SECTION */
+        .enquiry-intro {
+            text-align: center;
+            color: #5b4b3e;
+            font-size: 1rem;
+            margin: -1.5rem 0 2rem;
+        }
+
+        .enquiry-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            border: 1px solid #f0e7dd;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            margin-bottom: 4rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .enquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.3rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a3626;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group label i {
+            color: #b1875b;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.85rem 1rem;
+            border: 1px solid #e0d3c4;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            color: #2e241d;
+            background: #fdfaf6;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #b1875b;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(177, 135, 91, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .enquiry-submit-btn {
+            background: linear-gradient(135deg, #b1875b 0%, #8b6b4b 100%);
+            color: #fff;
+            border: none;
+            padding: 1.1rem 2rem;
+            border-radius: 60px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            box-shadow: 0 8px 20px -6px rgba(177, 135, 91, 0.5);
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        .enquiry-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px -8px rgba(177, 135, 91, 0.6);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: #8f7e6d;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .form-note i {
+            color: #b1875b;
+        }
+
+        @media (max-width: 700px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .enquiry-wrapper {
+                padding: 2rem 1.5rem;
+            }
+            .enquiry-submit-btn {
+                align-self: stretch;
+            }
+        }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
@@ -761,6 +896,72 @@
             <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1000&auto=format&fit=crop" alt="Plywood furniture design"></div>
             <div class="gallery-item"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1000&auto=format&fit=crop" alt="Plywood home decor"></div>
         </div>
+        <!-- ENQUIRY SECTION -->
+        <a id="enquiry"></a>
+        <h2 class="section-title">Send an Enquiry</h2>
+        <p class="enquiry-intro">Fill in your details below and we'll get back to you within 24 hours.</p>
+
+        <div class="enquiry-wrapper">
+            <form class="enquiry-form" id="enquiryForm" onsubmit="submitEnquiry(event)">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="enq-name"><i class="fas fa-user"></i> Your Name *</label>
+                        <input type="text" id="enq-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enq-phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                        <input type="tel" id="enq-phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="enq-email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="enq-email" name="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="enq-type"><i class="fas fa-tags"></i> Plywood Type</label>
+                        <select id="enq-type" name="plywood_type">
+                            <option value="">— Select a type —</option>
+                            <option>Softwood Plywood</option>
+                            <option>Hardwood Plywood</option>
+                            <option>Aircraft Plywood</option>
+                            <option>Lumber Core Plywood</option>
+                            <option>Exterior Plywood</option>
+                            <option>Marine Plywood</option>
+                            <option>Flexible Plywood</option>
+                            <option>Sanded Plywood</option>
+                            <option>Not Sure / Need Advice</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="enq-qty"><i class="fas fa-cubes"></i> Quantity (approx.)</label>
+                        <input type="text" id="enq-qty" name="quantity" placeholder="e.g., 20 sheets / 500 sq.ft">
+                    </div>
+                    <div class="form-group">
+                        <label for="enq-city"><i class="fas fa-map-marker-alt"></i> Delivery City</label>
+                        <input type="text" id="enq-city" name="city" placeholder="e.g., Kolkata">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="enq-message"><i class="fas fa-comment-alt"></i> Your Requirement</label>
+                    <textarea id="enq-message" name="message" rows="4" placeholder="Tell us about your project, delivery timeline, or any specific requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="enquiry-submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Enquiry
+                </button>
+
+                <p class="form-note">
+                    <i class="fas fa-info-circle"></i> Your enquiry will open in your email app, addressed to <strong>info.ply.sam@gmail.com</strong>.
+                </p>
+            </form>
+        </div>
 
         <!-- FAQ -->
         <h2 class="section-title">Frequently Asked Questions</h2>
@@ -787,7 +988,8 @@
                     <ul>
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#rate-chart">Rate Chart</a></li>
-                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="#enquiry">Enquiry</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
                         <li><a href="#top">Back to Top</a></li>
                     </ul>
                 </div>
@@ -821,6 +1023,49 @@
             } else {
                 text.textContent = 'Click to View Full Rate Chart';
             }
+        }
+    </script>
+    <script>
+        function submitEnquiry(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('enq-name').value.trim();
+            const phone = document.getElementById('enq-phone').value.trim();
+            const email = document.getElementById('enq-email').value.trim();
+            const type = document.getElementById('enq-type').value;
+            const qty = document.getElementById('enq-qty').value.trim();
+            const city = document.getElementById('enq-city').value.trim();
+            const message = document.getElementById('enq-message').value.trim();
+
+            const subject = `Enquiry from ${name} - Goraya Trading`;
+
+            const body = 
+`Hello Goraya Trading,
+
+I would like to send an enquiry. Here are my details:
+
+────────────────────────
+Name: ${name}
+Phone: ${phone}
+Email: ${email || 'Not provided'}
+Plywood Type: ${type || 'Not specified'}
+Quantity: ${qty || 'Not specified'}
+Delivery City: ${city || 'Not specified'}
+────────────────────────
+
+Requirement:
+${message || 'No additional details provided.'}
+
+────────────────────────
+Sent via Goraya Trading Website
+`;
+
+            const mailtoLink = `mailto:info.ply.sam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+
+            setTimeout(() => {
+                alert('Thank you, ' + name + '! Your email app should now open with your enquiry. Just click "Send" in your email to complete it.');
+            }, 500);
         }
     </script>
 

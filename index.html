@@ -530,6 +530,203 @@
             color: #8f7e6d;
             font-size: 0.9rem;
         }
+        /* PROFILE SECTION */
+        .profile-mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 0 0 3rem;
+        }
+
+        .profile-box {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid #f0e7dd;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+
+        .profile-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2b1d12;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .profile-box h3 i {
+            color: #b1875b;
+        }
+
+        .profile-section {
+            margin: 0 0 3rem;
+        }
+
+        .profile-subtitle {
+            font-size: 1.7rem;
+            text-align: center;
+            margin-bottom: 1.8rem;
+            color: #2b1d12;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+        }
+
+        .profile-subtitle i {
+            color: #b1875b;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            border: 1px solid #f0e7dd;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            border-color: #dcc9b6;
+            box-shadow: 0 16px 28px -10px rgba(72, 52, 34, 0.15);
+        }
+
+        .value-card i {
+            font-size: 2rem;
+            color: #b1875b;
+            margin-bottom: 0.8rem;
+        }
+
+        .value-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #2b1d12;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: #5b4b3e;
+        }
+
+        .services-list {
+            list-style: none;
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid #f0e7dd;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+
+        .services-list li {
+            padding: 0.7rem 0 0.7rem 2rem;
+            position: relative;
+            border-bottom: 1px dashed #ede3d8;
+            font-size: 1rem;
+            color: #3e332b;
+        }
+
+        .services-list li:last-child {
+            border-bottom: none;
+        }
+
+        .services-list li i {
+            position: absolute;
+            left: 0;
+            top: 0.85rem;
+            color: #3f8b5e;
+            font-size: 1rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            background: white;
+            border-radius: 16px;
+            padding: 1.2rem 1.4rem;
+            border: 1px solid #f0e7dd;
+            font-size: 0.95rem;
+            color: #3e332b;
+        }
+
+        .why-item i {
+            color: #3f8b5e;
+            margin-top: 0.2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid #f0e7dd;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-detail > i {
+            font-size: 1.5rem;
+            color: #b1875b;
+            background: #f3ede6;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            color: #2b1d12;
+        }
+
+        .contact-detail p {
+            font-size: 0.92rem;
+            color: #5b4b3e;
+        }
+
+        .contact-detail a {
+            color: #8b6b4b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-detail a:hover {
+            color: #5b4b3e;
+        }
+
+        @media (max-width: 900px) {
+            .profile-mission-vision { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+        }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
@@ -591,7 +788,107 @@
             </div>
         </div>
 
-        <!-- TYPES OF PLYWOOD -->
+        <!-- TYPES OF PLYWOOD -->        <!-- GORAYA TRADING PROFILE -->
+        <h2 class="section-title">About Goraya Trading</h2>
+
+        <div class="profile-mission-vision">
+            <div class="profile-box">
+                <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                <p>To provide premium-quality plywood and engineered wood products that empower homeowners, interior designers, architects, and furniture makers to build durable, beautiful, and long-lasting spaces. We are committed to delivering honest pricing, reliable service, and superior materials at every step.</p>
+            </div>
+            <div class="profile-box">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>To become India's most trusted name in plywood and engineered wood solutions — recognised not just for our products, but for our integrity, customer care, and contribution to building better homes and sustainable interiors.</p>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3 class="profile-subtitle"><i class="fas fa-gem"></i> Our Core Values</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-award"></i>
+                    <h4>Quality First</h4>
+                    <p>We never compromise on the grade, strength, or finish of our materials.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Trust & Transparency</h4>
+                    <p>Honest pricing, clear communication, and no hidden surprises.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Customer Commitment</h4>
+                    <p>Your project is our priority — from enquiry to delivery.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Durability</h4>
+                    <p>We source products that are built to last for decades.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Integrity</h4>
+                    <p>We do what we say, every single time.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3 class="profile-subtitle"><i class="fas fa-tools"></i> Our Services</h3>
+            <ul class="services-list">
+                <li><i class="fas fa-check-circle"></i> <strong>Premium Plywood Supply</strong> — Softwood, Hardwood, Marine, Exterior, Flexible, Aircraft, Lumber Core &amp; Sanded Plywood.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Engineered Wood Solutions</strong> — MDF, HDF, Particle Board, and HDHMR boards.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Bulk &amp; Project Supply</strong> — For builders, contractors, and interior firms.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Consultation &amp; Guidance</strong> — Helping you choose the right plywood for your specific application.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Doorstep Delivery</strong> — Reliable logistics across the region.</li>
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <h3 class="profile-subtitle"><i class="fas fa-star"></i> Why Choose Us</h3>
+            <div class="why-grid">
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Trusted Supplier</strong> — Years of experience in the plywood and wood industry.</span></div>
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Wide Product Range</strong> — Every type of plywood and engineered wood under one roof.</span></div>
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Competitive Pricing</strong> — Direct sourcing means better rates for you.</span></div>
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Consistent Quality</strong> — Only ISI-grade and certified products.</span></div>
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Personalised Service</strong> — Direct access to our team for quick support.</span></div>
+                <div class="why-item"><i class="fas fa-check"></i> <span><strong>Timely Delivery</strong> — We value your time as much as you do.</span></div>
+            </div>
+        </div>
+
+        <!-- CONTACT US -->
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-card">
+            <div class="contact-detail">
+                <i class="fas fa-user"></i>
+                <div>
+                    <h4>Samarjit Singh</h4>
+                    <p>Operations | Procurement | Marketing</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Address</h4>
+                    <p>31, Purohit Para Lane, Uttarpara, Hooghly – 712258, West Bengal, India</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:info.ply.sam@gmail.com">info.ply.sam@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Phone / WhatsApp</h4>
+                    <p><a href="tel:+916291166240">+91-6291166240</a></p>
+                </div>
+            </div>
+        </div>
+
         <h2 class="section-title">Different Types of Plywood & Their Uses</h2>
 
         <div class="cards-grid">
